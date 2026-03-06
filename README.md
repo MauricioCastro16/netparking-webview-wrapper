@@ -1,73 +1,52 @@
-# Seminario WebView Wrapper
+[![Consultar a DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MauricioCastro16/android-estacionamientos-wrapper)
 
-Esta aplicación Android es un wrapper WebView para la aplicación web de estacionamientos desplegada en Render.
+# NetParking WebView Wrapper
 
-## Características
+![Platform](https://img.shields.io/badge/platform-Android-green.svg)
+![Language](https://img.shields.io/badge/language-Kotlin-orange.svg)
 
-- **WebView optimizado**: Configurado para cargar la aplicación web de estacionamientos
-- **Barras negras**: 5% arriba, 5% abajo, 90% contenido WebView
-- **Compatibilidad API 24**: Compatible con Android 7.0 Nougat y versiones superiores
-- **JavaScript habilitado**: Soporte completo para la funcionalidad web
-- **Navegación mejorada**: Botón atrás funciona dentro del WebView
+## Descripción Corta
 
-## URL de destino
-
+Aplicación Android nativa que envuelve una aplicación web de gestión de estacionamientos mediante WebView. Proporciona una experiencia móvil optimizada con navegación integrada y controles nativos.
 La aplicación carga automáticamente: `https://seminario-estacionamientos-3i3i.onrender.com/Account/Login`
 
-## Configuración técnica
+## Características Principales
 
-### Permisos requeridos
-- `INTERNET`: Para acceso a la web
-- `ACCESS_NETWORK_STATE`: Para verificar conectividad
-- `ACCESS_WIFI_STATE`: Para optimización de red
+- WebView optimizado con JavaScript y DOM Storage habilitados
+- Barras negras superiores e inferiores para integración visual (5% cada una)
+- Navegación hacia atrás integrada dentro del historial WebView
+- Compatibilidad con Android 7.0 (API 24) y superiores
+- Configuración de seguridad de red para HTTP/HTTPS mixto
+- Orientación vertical forzada para mejor experiencia móvil
 
-### Configuración WebView
-- JavaScript habilitado
-- DOM Storage habilitado
-- Geolocalización habilitada
-- Zoom habilitado
-- Cache optimizado
-- User Agent personalizado
+## Stack Tecnológico
 
-### Compatibilidad
-- **minSdk**: 24 (Android 7.0 Nougat)
-- **targetSdk**: 36 (Android 14)
-- **compileSdk**: 36
+| Categoría | Tecnologías |
+|-----------|-------------|
+| Frontend | Android SDK, WebView, ViewBinding, ConstraintLayout |
+| Backend | Aplicación web remota (Render) |
+| Base de Datos | No aplica (consumo de API remota) |
+| Herramientas | Gradle, Android Studio, Kotlin, AndroidX |
 
-## Compilación
+## Arquitectura / Flujo
 
-1. Abrir el proyecto en Android Studio
-2. Sincronizar con Gradle Files
-3. Compilar y ejecutar en dispositivo o emulador
+La aplicación sigue una arquitectura de una sola actividad donde MainActivity configura y aloja el WebView principal. El WebView carga la aplicación web remota y maneja toda la navegación internamente. Los eventos del ciclo de vida de la actividad gestionan la inicialización, navegación hacia atrás y limpieza de recursos del WebView.
 
-## Estructura del proyecto
+## Instalación y Uso
 
+```bash
+# Clonar el repositorio
+git clone https://github.com/MauricioCastro16/android-estacionamientos-wrapper.git
+
+# Navegar al directorio del proyecto
+cd android-estacionamientos-wrapper
+
+# Abrir en Android Studio
+# File -> Open -> seleccionar el directorio del proyecto
+
+# Sincronizar con Gradle Files
+# Tools -> Gradle -> Sync Project with Gradle Files
+
+# Ejecutar en dispositivo o emulador
+# Run -> Run 'app'
 ```
-app/
-├── src/main/
-│   ├── java/com/example/seminario_webviewwrapper/
-│   │   └── MainActivity.kt          # Actividad principal con WebView
-│   ├── res/
-│   │   ├── layout/
-│   │   │   └── activity_main.xml     # Layout con barras negras y WebView
-│   │   ├── xml/
-│   │   │   └── network_security_config.xml  # Configuración de seguridad de red
-│   │   └── values/
-│   │       └── themes.xml            # Tema de la aplicación
-│   └── AndroidManifest.xml          # Permisos y configuración
-└── build.gradle.kts                 # Dependencias y configuración
-```
-
-## Dependencias principales
-
-- `androidx.appcompat:appcompat:1.7.0`
-- `androidx.webkit:webkit:1.12.1`
-- `androidx.constraintlayout:constraintlayout:2.1.4`
-- `androidx.core:core-ktx:1.17.0`
-
-## Notas importantes
-
-- La aplicación está configurada para orientación portrait
-- El WebView maneja automáticamente la navegación interna
-- Se incluye configuración de seguridad de red para HTTPS/HTTP mixto
-- Compatible con todas las funcionalidades de la aplicación web original
