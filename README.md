@@ -24,8 +24,6 @@ La aplicación carga automáticamente: `https://seminario-estacionamientos-3i3i.
 | Categoría | Tecnologías |
 |-----------|-------------|
 | Frontend | Android SDK, WebView, ViewBinding, ConstraintLayout |
-| Backend | Aplicación web remota (Render) |
-| Base de Datos | No aplica (consumo de API remota) |
 | Herramientas | Gradle, Android Studio, Kotlin, AndroidX |
 
 ## Arquitectura / Flujo
