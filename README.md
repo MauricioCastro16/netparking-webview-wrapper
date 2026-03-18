@@ -1,4 +1,4 @@
-[![Consultar a DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MauricioCastro16/android-estacionamientos-wrapper)
+[![Consultar a DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MauricioCastro16/netparking-webview-wrapper)
 
 # NetParking WebView Wrapper
 
@@ -34,10 +34,10 @@ La aplicación sigue una arquitectura de una sola actividad donde MainActivity c
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/MauricioCastro16/android-estacionamientos-wrapper.git
+git clone https://github.com/MauricioCastro16/netparking-webview-wrapper.git
 
 # Navegar al directorio del proyecto
-cd android-estacionamientos-wrapper
+cd netparking-webview-wrapper
 
 # Abrir en Android Studio
 # File -> Open -> seleccionar el directorio del proyecto
